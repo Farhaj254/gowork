@@ -126,3 +126,22 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
+function loadGame(gameTitle, gameUrl) {
+    const iframe = document.querySelector("iframe");
+    const gameTitleElement = document.getElementById("game-title");
+
+    // Hide iframe for smooth transition
+    iframe.classList.add("hidden");
+
+    setTimeout(() => {
+        // Update the iframe source and title
+        gameTitleElement.textContent = gameTitle;
+        iframe.src = gameUrl;
+
+        // Update the URL
+        window.history.pushState(null, "", `?game=${encodeURIComponent(gameUrl)}`);
+
+        // Show iframe after updating
+        iframe.classList.remove("hidden");
+    }, 300); // Match transition duration
+}

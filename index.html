@@ -2,253 +2,240 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Game</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-        <div class="main-container"> <!-- Start of grid container -->
-    <header>
-        <div id="search-overlay" class="search-overlay">
-    <div class="search-box">
-        <input type="text" id="search-input" placeholder="Search...">
-        <button id="close-search" onclick="toggleSearchOverlay()">✖</button>
-    </div>
-</div>
+    <nav>
+        <a href="#" class="logo">
+            <box-icon name='game' type='solid' color='#00FFFF' ></box-icon>Game<span>/></span>
+        </a>
+        <div class="menuToggle" onclick="toggleMenu()">
+        </div>
+        <ul class="navigation">
+            <li><a href="#banner" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#games" onclick="toggleMenu()">Game</a></li>
+            <li><a href="#merchandise" onclick="toggleMenu()">Merchandise</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
 
-    <!-- Hamburger Menu -->
-    <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
-
-    <!-- Logo (Left) -->
-    <div class="logo">
-        <img src="logo.png" alt="Eggy Car Logo">
-        <span>Eggy Car</span>
-    </div>
-
-    <!-- Navigation Menu (Center) -->
-    <nav id="nav-menu">
-        <a href="#">Home</a>
-        <a href="#">Car</a>
-        <a href="#">Skill</a>
-        <a href="#">Action</a>
-        <a href="#">Shooting</a>
-        <a href="#">Sport</a>
-        <a href="#">Idle</a>
+        </ul>
     </nav>
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>
+                A Game Is The Complete Exploration Of Freedom Within A Restrictive Environment
+            </h2>
+            <p>Lorem ipsum dolor sit amet consectetur tenetur repellat. Soluta rerum nesciunt autem. At asperiores.</p>
+            <div id="section10" class="demo">
+                <a href="#about"><span></span></a>
+            </div>
+        </div>
+    </section>
 
-    <!-- Right Container (Search + Dark Mode) -->
-    <div class="right-container">
-        <div class="search-container">
-            <button class="search-icon" onclick="toggleSearchOverlay()">🔍</button>
+    <!-- about  -->
+    <section class="about" id="about">
+        <div class="row" data-aos="zoom-out-down">
+            <div class="col50">
+                <!-- <h2 class="title-text"><box-icon name='user-rectangle' type='solid' color='#00ffff' ></box-icon>About <span>Us</span></h2> -->
+                <h2 class="title-text"><lord-icon
+                    src="https://cdn.lordicon.com/nocovwne.json"
+                    trigger="loop"
+                    colors="primary:#00ffff,secondary:#ffffff"
+                    stroke="66"
+                    style="width: 50px;height: 50px;margin-top: -10px;">
+                </lord-icon>About <span>Us</span></h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quo illum iusto labore consequuntur, repudiandae quasi officia, aut provident similique corrupti eum quibusdam corporis assumenda. Similique, vel reprehenderit numquam voluptas repellat voluptatem et omnis! Odio, ex adipisci maxime maiores sunt deleniti labore consequuntur accusamus voluptate!</br></br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam officia magni consectetur inventore, quisquam soluta maiores culpa illo est distinctio expedita ad aliquid. Enim odit, blanditiis temporibus sunt non impedit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat modi ipsam aperiam cumque nesciunt ea tempora! In, totam? Porro exercitationem dolor voluptatem alias accusamus iure consectetur iste vero eaque id?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, corrupti quis sunt magnam dolorum accusantium inventore earum placeat quos, non rem vero ipsam neque dolore sed? Cupiditate incidunt porro laudantium.</br></br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dicta facere iste qui velit autem, accusantium cumque pariatur expedita consequuntur optio quis eaque delectus quod similique, magni beatae a earum inventore sit perspiciatis. Mollitia, itaque?</p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="media/ab.jpg" alt="">
+                </div>
+            </div>
         </div>
-        <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
-    </div>
-</header>
-    
-<!-- Scrolling Games Section -->
-<div class="scrolling-games">
-    <div class="scrolling-wrapper">
-        <div class="scrolling-game-card" onclick="loadGame('Game 1', 'game1.html')">
-            <img src="game1-thumbnail.jpg" alt="Game 1">
-            <div class="scrolling-game-title">Game 1</div>
-        </div>
-        <div class="scrolling-game-card" onclick="loadGame('Game 2', 'game2.html')">
-            <img src="game2-thumbnail.jpg" alt="Game 2">
-            <div class="scrolling-game-title">Game 2</div>
-        </div>
-        <div class="scrolling-game-card" onclick="loadGame('Game 3', 'game3.html')">
-            <img src="game3-thumbnail.jpg" alt="Game 3">
-            <div class="scrolling-game-title">Game 3</div>
-        </div>
-        <div class="scrolling-game-card" onclick="loadGame('Game 4', 'game4.html')">
-            <img src="game4-thumbnail.jpg" alt="Game 4">
-            <div class="scrolling-game-title">Game 4</div>
-        </div>
-        <div class="scrolling-game-card" onclick="loadGame('Game 5', 'game5.html')">
-            <img src="game5-thumbnail.jpg" alt="Game 5">
-            <div class="scrolling-game-title">Game 5</div>
-        </div>
-    </div>
-</div>
-    
-<div class="menu-overlay" id="menu-overlay">
-    <button class="close-menu" onclick="toggleMenu()">&times;</button>
-    <nav class="mobile-nav" id="mobile-nav">
-        <a href="#">Home</a>
-        <a href="#">Car</a>
-        <a href="#">Skill</a>
-        <a href="#">Action</a>
-        <a href="#">Shooting</a>
-        <a href="#">Sport</a>
-        <a href="#">Idle</a>
-    </nav>
-</div>
+    </section>
+    <!-- ------ -->
 
 
-    <!-- Left Section -->
-    <div class="game-section" id="left-game-section">
-        <div class="grid-section">
-            <div class="game-card" onclick="loadGame('Fireboy and Watergirl 1: Forest Temple', 'game/game1.html')">
-                <img src="images/War Robots Battle Mech Arena-512x384.jpg" alt="Game 1">
-                <div class="game-title">Fireboy and Watergirl 1: Forest Temple </div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 2', 'game2.html')">
-                <img src="game2-thumbnail.jpg" alt="Game 2">
-                <div class="game-title">Game 2</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 3', 'game3.html')">
-                <img src="game3-thumbnail.jpg" alt="Game 3">
-                <div class="game-title">Game 3</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 4', 'game4.html')">
-                <img src="game4-thumbnail.jpg" alt="Game 4">
-                <div class="game-title">Game 4</div>
-            </div>
+    <!-- ganes -->
+    <section id="games" class="game">
+        <div class="title">
+            <lord-icon
+                src="https://cdn.lordicon.com/ibgjiwvi.json"
+                trigger="loop"
+                colors="primary:#00ffff,secondary:#ffffff"
+                style="width: 50px;height: 50px;">
+            </lord-icon>
+            <h2 class="title-text"><span>G</span>ames</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam fugiat nemo qui.</p>
         </div>
-        <div class="ad-container">Advertisement</div>
-        <div class="grid-section">
-            <div class="game-card" onclick="loadGame('Game 5', 'game5.html')">
-                <img src="game5-thumbnail.jpg" alt="Game 5">
-                <div class="game-title">Game 5</div>
+        <div class="content">
+            <div class="box" data-aos="flip-left">
+                <div class="imgBx">
+                    <img src="media/games/bgmi.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Battlegrounds Mobile India</h3>
+                </div>
             </div>
-            <div class="game-card" onclick="loadGame('Game 6', 'game6.html')">
-                <img src="game6-thumbnail.jpg" alt="Game 6">
-                <div class="game-title">Game 6</div>
+            <div class="box" data-aos="flip-right">
+                <div class="imgBx">
+                    <img src="media/games/cod.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Call Of Duty:Mobile</h3>
+                </div>
             </div>
-            <div class="game-card" onclick="loadGame('Game 7', 'game7.html')">
-                <img src="game7-thumbnail.jpg" alt="Game 7">
-                <div class="game-title">Game 7</div>
+            <div class="box" data-aos="flip-left">
+                <div class="imgBx">
+                    <img src="media/games/minecraft.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Minecraft</h3>
+                </div>
             </div>
-            <div class="game-card" onclick="loadGame('Game 8', 'game8.html')">
-                <img src="game8-thumbnail.jpg" alt="Game 8">
-                <div class="game-title">Game 8</div>
+            <div class="box" data-aos="flip-right">
+                <div class="imgBx">
+                    <img src="media/games/lords.png" alt="">
+                </div>
+                <div class="text">
+                    <h3>Lords Mobile</h3>
+                </div>
+            </div>
+            <div class="box" data-aos="flip-left">
+                <div class="imgBx">
+                    <img src="media/games/pokemon.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Pokemob Unite</h3>
+                </div>
+            </div>
+            <div class="box" data-aos="flip-right">
+                <div class="imgBx">
+                    <img src="media/games/freefire.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Garena Free Fire</h3>
+                </div>
             </div>
         </div>
     </div>
+    </section>
+    <!-- ----- -->
 
-    <!-- Center Section -->
-    <div id="iframe-wrapper">
-        <div id="iframe-container">
-            <iframe id="game-frame" src="game.html" allowfullscreen></iframe>
+    <!-- merchandise  -->
+    <section class="merchandise" id="merchandise">
+        <div class="title">
+            <lord-icon
+                src="https://cdn.lordicon.com/ippkhukl.json"
+                trigger="loop"
+                colors="primary:#00ffff,secondary:#ffffff"
+                style="width: 50px;height: 50px;">
+            </lord-icon>
+            <h2 class="title-text">Gaming <span>Merchandise</span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam fugiat nemo qui.</p>
         </div>
-        <div class="game-info">
-            <div id="game-title">Select a Game</div>
-            <div class="button-container">
-                <button onclick="toggleFullscreen()">&#x26F6;</button>
-                <button id="like-button" onclick="toggleLike()">👍 <span id="like-count">0</span></button>
-                <button id="dislike-button" onclick="toggleDislike()">👎 <span id="dislike-count">0</span></button>
+        <div class="content">
+            <div class="box box-1" data-aos="zoom-out-down">
+                <div class="imgBx">
+                    <img src="media/merchandise/streak-hoodie.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Hoodies</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo neque debitis vel aut nam voluptatibus veniam quam deserunt dicta soluta?</p>
+                </div>
+                <a href="#" class="know">Know More</a>
             </div>
-        </div>
-         <!-- Game Description and Instructions -->
-    <div id="game-info-section">
-        <h3>Game Description</h3>
-        <p id="game-description">Select a game to see its description and instructions here.</p>
-        <h3>Instructions</h3>
-        <p id="game-instructions">Instructions will appear once a game is selected.</p>
-    </div>
-    </div>
+            <div class="box box-2" data-aos="zoom-out-down">
+                <div class="imgBx">
+                    <img src="media/merchandise/mask.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Mask</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo neque debitis vel aut nam voluptatibus veniam quam deserunt dicta soluta?</p>
+                </div>
+                <a href="#" class="know">Know More</a>
+            </div>
+            <div class="box box-3" data-aos="zoom-out-down">
+                <div class="imgBx">
+                    <img src="media/merchandise/mobile-collabs.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>T-shirts</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo neque debitis vel aut nam voluptatibus veniam quam deserunt dicta soluta?</p>
+                </div>
+                <a href="#" class="know">Know More</a>
+            </div>
+    </section>
+    <!-- ----- -->
 
-    <!-- Right Section -->
-    <div class="game-section" id="right-game-section">
-        <div class="grid-section">
-            <div class="game-card" onclick="loadGame('Game 1', 'game1.html')">
-                <img src="game1-thumbnail.jpg" alt="Game 1">
-                <div class="game-title">Game 1</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 2', 'game2.html')">
-                <img src="game2-thumbnail.jpg" alt="Game 2">
-                <div class="game-title">Game 2</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 3', 'game3.html')">
-                <img src="game3-thumbnail.jpg" alt="Game 3">
-                <div class="game-title">Game 3</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 4', 'game4.html')">
-                <img src="game4-thumbnail.jpg" alt="Game 4">
-                <div class="game-title">Game 4</div>
-            </div>
-        </div>
-        <div class="ad-container">Advertisement</div>
-        <div class="grid-section">
-            <div class="game-card" onclick="loadGame('Game 5', 'game5.html')">
-                <img src="game5-thumbnail.jpg" alt="Game 5">
-                <div class="game-title">Game 5</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 6', 'game6.html')">
-                <img src="game6-thumbnail.jpg" alt="Game 6">
-                <div class="game-title">Game 6</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 7', 'game7.html')">
-                <img src="game7-thumbnail.jpg" alt="Game 7">
-                <div class="game-title">Game 7</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 8', 'game8.html')">
-                <img src="game8-thumbnail.jpg" alt="Game 8">
-                <div class="game-title">Game 8</div>
-            </div>
-    </div>
-         </div> <!-- End of grid container -->
-            </div> <!-- End of main grid container -->
 
- <!-- 50 Fifty Games Section -->
-    <div class="fifty-games-section">
-        <h2>50 Fifty Games</h2>
-        <div class="grid-section">
-            <div class="game-card" onclick="loadGame('Game 1', 'game1.html')">
-                <img src="game1-thumbnail.jpg" alt="Game 1">
-                <div class="game-title">Game 1</div>
+    <!-- contact  -->
+    <section class="contact" id="contact">
+        <div class="content">
+            <div class="text">
+                <h3>Send Us A Message</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis a impedit nulla neque alias temporibus.</p>
             </div>
-            <div class="game-card" onclick="loadGame('Game 2', 'game2.html')">
-                <img src="game2-thumbnail.jpg" alt="Game 2">
-                <div class="game-title">Game 2</div>
+            <div class="contactForm">
+                <form action="mesage.php">
+                    <div class="row100">
+                        <div class="inputBox50">
+                            <input type="text" name="fullname" id="" placeholder="Full Name">
+                        </div>
+                        <div class="inputBox50">
+                            <input type="email" name="fullname" id="" placeholder="Email Adress">
+                        </div>
+                    </div>
+                    <div class="row100">
+                        <div class="inputBox100">
+                            <textarea name="messages" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row100">
+                        <div class="inputBox100">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="game-card" onclick="loadGame('Game 2', 'game2.html')">
-                <img src="game2-thumbnail.jpg" alt="Game 2">
-                <div class="game-title">Game 2</div>
+            <div class="social">
+                <li><a href="https://www.linkedin.com/in/smruti-ranjan-nayak/"><img src="media/icon/linkedin.png" alt=""></a></li>
+                <li><a href="https://www.instagram.com/sm8uti/"><img src="media/icon/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="media/icon/facebook.png" alt=""></a></li>
             </div>
-            <div class="game-card" onclick="loadGame('Game 2', 'game2.html')">
-                <img src="game2-thumbnail.jpg" alt="Game 2">
-                <div class="game-title">Game 2</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 2', 'game2.html')">
-                <img src="game2-thumbnail.jpg" alt="Game 2">
-                <div class="game-title">Game 2</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 2', 'game2.html')">
-                <img src="game2-thumbnail.jpg" alt="Game 2">
-                <div class="game-title">Game 2</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 2', 'game2.html')">
-                <img src="game2-thumbnail.jpg" alt="Game 2">
-                <div class="game-title">Game 2</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 2', 'game2.html')">
-                <img src="game2-thumbnail.jpg" alt="Game 2">
-                <div class="game-title">Game 2</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 2', 'game2.html')">
-                <img src="game2-thumbnail.jpg" alt="Game 2">
-                <div class="game-title">Game 2</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 2', 'game2.html')">
-                <img src="game2-thumbnail.jpg" alt="Game 2">
-                <div class="game-title">Game 2</div>
-            </div><div class="game-card" onclick="loadGame('Game 2', 'game2.html')">
-                <img src="game2-thumbnail.jpg" alt="Game 2">
-                <div class="game-title">Game 2</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 2', 'game2.html')">
-                <img src="game2-thumbnail.jpg" alt="Game 2">
-                <div class="game-title">Game 2</div>
-            </div>
-            <div class="game-card" onclick="loadGame('Game 2', 'game2.html')">
-                <img src="game2-thumbnail.jpg" alt="Game 2">
-                <div class="game-title">Game 2</div>
-            </div>
-            
         </div>
-    </div>
+        <p class="copyright">Desgin & Developed By<a href="https://github.com/sm8UTI/"> SM8UTI</a></p>
+    </section>
+    <!-- ----- -->
+
+
+
+    <!-- script -->
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 2000,
+        });
+    </script>
+    <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            const header = document.querySelector('nav');
+            header.classList.toggle("sticky",window.scrollY > 0);
+        })
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
 </body>
 </html>
-

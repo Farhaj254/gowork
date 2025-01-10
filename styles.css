@@ -919,3 +919,15 @@ body.dark-mode .hover-effect:hover {
 body.dark-mode .hover-effect .title {
     background: rgba(255, 255, 255, 0.2);
 }
+iframe {
+    transition: opacity 0.3s ease-in-out;
+}
+
+iframe.hidden {
+    opacity: 0;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}

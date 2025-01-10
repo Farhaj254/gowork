@@ -3,7 +3,9 @@
         let isLiked = false;
         let isDisliked = false;
 
-        function loadGame(gameTitle, gameUrl) {
+     
+
+   function loadGame(gameTitle, gameUrl) {
     const iframe = document.querySelector("iframe");
     const gameTitleElement = document.getElementById("game-title");
 
@@ -28,6 +30,7 @@ window.onload = function () {
         gameTitleElement.textContent = "Game"; // Optional default name
     }
 };
+
 
 
         function toggleLike() {

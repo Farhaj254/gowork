@@ -5,31 +5,46 @@
 
      
 
-   function loadGame(gameTitle, gameUrl) {
+  // Function to load the selected game
+function loadGame(gameTitle, gameUrl) {
     const iframe = document.querySelector("iframe");
     const gameTitleElement = document.getElementById("game-title");
 
-    // Update the iframe source and title
-    gameTitleElement.textContent = gameTitle;
-    iframe.src = gameUrl;
+    if (iframe && gameTitleElement) {
+        // Update the iframe source and game title
+        iframe.src = gameUrl;
+        gameTitleElement.textContent = gameTitle;
 
-    // Update the URL without reloading the page
-    window.history.pushState(null, "", `?game=${encodeURIComponent(gameUrl)}`);
+        // Update the URL without reloading the page
+        window.history.pushState(null, "", `?game=${encodeURIComponent(gameUrl)}`);
+    } else {
+        console.error("Iframe or Game Title Element not found!");
+    }
 }
 
-// Load game based on URL when the page loads or reloads
+// Attach event listeners to all game cards
+document.querySelectorAll(".game-card").forEach((card) => {
+    card.addEventListener("click", function () {
+        const gameTitle = this.getAttribute("data-title");
+        const gameUrl = this.getAttribute("data-url");
+        loadGame(gameTitle, gameUrl);
+    });
+});
+
+// Load game on page load if URL has query parameters
 window.onload = function () {
     const params = new URLSearchParams(window.location.search);
     const gameUrl = params.get("game");
 
     if (gameUrl) {
         const iframe = document.querySelector("iframe");
-        iframe.src = gameUrl;
+        if (iframe) iframe.src = gameUrl;
 
         const gameTitleElement = document.getElementById("game-title");
-        gameTitleElement.textContent = "Game"; // Optional default name
+        if (gameTitleElement) gameTitleElement.textContent = decodeURIComponent(gameUrl.split('/').pop());
     }
 };
+
 
 
 
